@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wave Equation</title>
+    <style>
+      body {
+        background-color: #fffffc;
+      }
+      .myCanvas {
+    		position: absolute;
+    		margin: 0;
+    		padding: 0;
+    		left: 0;
+    		top: 0;
+      }
+      #area1 {
+        position: relative;
+    		width: 600px;
+    		height: 100px;
+      }
+      #area2 {
+        position: relative;
+        width: 600;
+        height: 200px;
+      }
+      #area3 {
+        position: relative;
+        width: 600px;
+        height: 200px;
+      }
+      #graph1 {
+        background-color: #fffffc;
+      }
+      #graph2 {
+        background-color: #dfffff;
+        padding-left: 20px;
+      }
+      #graph3 {
+        background-color: #ecfba9;
+        padding-left: 20px;
+      }
+    </style>
+    <script src="wave_equation.jsx.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		JSX.require("wave_equation.jsx").wave_equation.main$SSS( "graph1", "graph2", "graph3" );
+		JSX.require("wave_equation.jsx").gui.main$SSSS( "start", "stop", "b03", "b05" );
+      });
+    </script>
+  </head>
+  <body>
+
+  <div id="area2">
+    <canvas class="myCanvas" id="graph2" width="600" height="200"></canvas>
+    <canvas class="myCanvas" id="graph2b" width="600" height="200"></canvas>
+  </div>
+  <div id="area1">
+    <canvas class="myCanvas" id="graph1" width="600" height="100"></canvas>
+    <canvas class="myCanvas" id="graph1b" width="600" height="100"></canvas>
+  </div>
+  <div id="area3">
+    <canvas class="myCanvas" id="graph3" width="600" height="200"></canvas>
+    <canvas class="myCanvas" id="graph3b" width="600" height="200"></canvas>
+  </div>
+  <button type="button" id="start">start</button>
+  <button type="button" id="stop">stop</button> 
+  </body>
+</html>
+
